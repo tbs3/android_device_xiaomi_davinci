@@ -627,9 +627,6 @@
     <!-- True if the firmware supports connected MAC randomization -->
     <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
 
-    <!-- Height of the status bar in portrait -->
-    <dimen name="status_bar_height_portrait">35.0dip</dimen>
-
     <!-- Radius of the software rounded corners. -->
     <dimen name="rounded_corner_radius">103px</dimen>
 
