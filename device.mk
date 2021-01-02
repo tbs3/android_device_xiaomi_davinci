@@ -23,6 +23,12 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/davinci/davinci-vendor.mk)
 
+# Gapps
+ifeq ($(WITH_GAPPS), true)
+    $(call inherit-product, vendor/gapps/gapps.mk)
+    EXTENDED_BUILD_TYPE:=UNOFFICIAL_GAPPS
+endif
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
