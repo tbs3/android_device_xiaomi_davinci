@@ -116,4 +116,6 @@ void vendor_load_properties() {
     }
 
     property_override("ro.boot.hardware.revision", hardware_revision.c_str());
+
+    property_override("ro.build.host", "jenkins");
 }
