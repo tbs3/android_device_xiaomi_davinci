@@ -25,8 +25,9 @@ $(call inherit-product, vendor/xiaomi/davinci/davinci-vendor.mk)
 
 # Gapps
 ifeq ($(WITH_GAPPS), true)
-    $(call inherit-product, vendor/gapps/gapps.mk)
     EXTENDED_BUILD_TYPE:=UNOFFICIAL_GAPPS
+    WITH_GMS := true
+    $(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
 # Additional native libraries
